@@ -1,31 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Dec 12 05:04:26 2024
-
-@author: Silas Carvalho
-
-This code is released under the MIT License.
-
-Copyright (c) 2024 Silas Carvalho
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-"""
 from colorama import Fore, Style, init
 
 # Inicializa o colorama
@@ -62,15 +34,21 @@ def calcular_preco_venda():
             print(Fore.LIGHTRED_EX + "Erro: Por favor, insira valores numéricos válidos.")
             continue
 
-        # Cálculo do preço de venda (PV)
+        # Verificar se a margem é 100%, se for, o PV é 2 vezes o custo
         if margem_total == 1:
             pv = 2 * custo  # Para margem de 100%, PV = 2 * custo
         else:
-            pv = custo / (1 - margem_total)
+            # Cálculo do preço de venda (PV) com base na fórmula PV = Custo / (1 - Margem Percentual)
+            pv = custo / (1 - margem_total)  # Calcula o preço de venda com base na margem percentual
 
         # Cálculo do lucro bruto (LB) e margem percentual (M%)
         lucro_bruto = pv - custo
-        margem_percentual = (lucro_bruto / pv) * 100
+
+        # Ajuste para margem de 100%
+        if margem_total == 1:
+            margem_percentual = 100.00  # Se a margem for 100%, a margem percentual é 100%
+        else:
+            margem_percentual = (lucro_bruto / pv) * 100  # Caso contrário, calcula normalmente
 
         # Preço de venda por unidade (produto)
         preco_por_produto = pv / quantidade_produtos
@@ -115,4 +93,3 @@ def calcular_preco_venda():
 
 if __name__ == "__main__":
     calcular_preco_venda()
-
