@@ -8,12 +8,12 @@ Certifique-se de que você tem o Python 3.x instalado em seu sistema. O Python 3
 
 ## Instalar dependências
 
-Windows Power Shell
+### Windows Power Shell
 ```bash
 pip install colorama
 ```
 
-Linux ou MacOs
+### Linux ou MacOs
 ```bash
 sudo pip install colorama
 ```
@@ -43,46 +43,46 @@ Lucro Líquido: R$11.83
 
 ## Fórmulas Utilizadas nos Cálculos Financeiros
 
-Custo dos Produtos Vendidos (CMV):
+### Custo dos Produtos Vendidos (CMV):
 ```bash
 CMV=19,37
 ```
-Preço de Venda (PV):
+### Preço de Venda (PV):
 ```bash
 PV = CMV / (1 - 0,55) = 19,37 / 0,45 ≈ 43,04
 ```
-Lucro Bruto (LB):
+### Lucro Bruto (LB):
 ```bash
 LB = PV - CMV = 43,04 - 19,37 = 23,67
 ```
 
-Margem Percentual (M%):
+### Margem Percentual (M%):
 ```bash
 M% = (LB / PV) * 100 = (23,67 / 43,04) * 100 ≈ 55%
 ```
 
-Preço de Venda por Produto (PV por unidade):
+### Preço de Venda por Produto (PV por unidade):
 ```bash
 PV por unidade = PV / 20 = 43,04 / 20 ≈ 2,15
 ```
 
-Comissão do Vendedor por Produto:
+### Comissão do Vendedor por Produto:
 ```bash
 Comissão por unidade = PV por unidade * 0,05 = 2,15 * 0,05 = 0,1075 ≈ 0,11
 ```
 
-Comissão Total do Vendedor:
+### Comissão Total do Vendedor:
 ```bash
 Comissão total = Comissão por unidade * 20 = 0,11 * 20 = 2,20
 ```
 
-Pró-labore:
+### Pró-labore:
 ```bash
 Pró-labore total = LB * 0,5 = 23,67 * 0,5 = 11,835 ≈ 11,84
 Pró-labore por sócio = Pró-labore total / 5 = 11,84 / 5 = 2,368 ≈ 2,37
 ```
 
-Lucro Líquido (LL):
+### Lucro Líquido (LL):
 ```bash
 LL = LB - Pró-labore total = 23,67 - 11,84 = 11,83
 ```
