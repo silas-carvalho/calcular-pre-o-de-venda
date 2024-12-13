@@ -18,12 +18,85 @@ Linux ou MacOs
 sudo pip install colorama
 ```
 
-# Como usar
+## Cálculos realizados pelo programa; exemplo
 
-Como mencionado anteriormente, é necessário ter os custos totais em mãos, que, neste exemplo, são R$19,37.
+```bash
+Custo: R$19.37
+Preço de Venda Total (PV): R$43.04
+----------------------------------------
+Lucro Bruto (LB): R$23.67
+Margem Percentual (M%): 55.00%
+----------------------------------------
+Preço de Venda por Produto: R$2.15
+Comissão do Vendedor por Produto: R$0.11
+Comissão Total do Vendedor: R$2.20
+Comissão Total para 1 Vendedores: R$2.20
+----------------------------------------
+Pró-labore Total: R$11.84
+Pró-labore Sócio 1: R$2.37
+Pró-labore Sócio 2: R$2.37
+Pró-labore Sócio 3: R$2.37
+Pró-labore Sócio 4: R$2.37
+Pró-labore Sócio 5: R$2.37
+Lucro Líquido: R$11.83
+```
 
-![Captura de tela 2024-12-12 060222](https://github.com/user-attachments/assets/0cf83a50-00aa-47b9-95ce-c931785d1813)
+## Fórmulas Utilizadas nos Cálculos Financeiros
 
-Abra o "calcular_preco_venda_v1" e digite os valores de acordo com sua necessidade
+Custo dos Produtos Vendidos (CMV):
+```bash
+CMV=19,37
+```
+Preço de Venda (PV):
+```bash
+PV = CMV / (1 - 0,55) = 19,37 / 0,45 ≈ 43,04
+```
+Lucro Bruto (LB):
+```bash
+LB = PV - CMV = 43,04 - 19,37 = 23,67
+```
 
-![Captura de tela 2024-12-12 064436](https://github.com/user-attachments/assets/8d439a16-b1db-4907-a5fb-d9b58d425172)
+Margem Percentual (M%):
+```bash
+M% = (LB / PV) * 100 = (23,67 / 43,04) * 100 ≈ 55%
+```
+
+Preço de Venda por Produto (PV por unidade):
+```bash
+PV por unidade = PV / 20 = 43,04 / 20 ≈ 2,15
+```
+
+Comissão do Vendedor por Produto:
+```bash
+Comissão por unidade = PV por unidade * 0,05 = 2,15 * 0,05 = 0,1075 ≈ 0,11
+```
+
+Comissão Total do Vendedor:
+```bash
+Comissão total = Comissão por unidade * 20 = 0,11 * 20 = 2,20
+```
+
+Pró-labore:
+```bash
+Pró-labore total = LB * 0,5 = 23,67 * 0,5 = 11,835 ≈ 11,84
+Pró-labore por sócio = Pró-labore total / 5 = 11,84 / 5 = 2,368 ≈ 2,37
+```
+
+Lucro Líquido (LL):
+```bash
+LL = LB - Pró-labore total = 23,67 - 11,84 = 11,83
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
